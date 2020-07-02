@@ -1,0 +1,118 @@
+{{!--
+Wow what the hell is going on in here even?
+
+Ok so, several templates use this big header with a giant BG image. Nice idea, but big images
+have a heavy impact on performance, so it's a good idea to make them responsive. Because we
+can only get the image dynamically using Handlebars, and we can only set the image to properly
+be a background image using CSS, we end up with a handful of inline styles.
+
+If the template in question has a background image, then we render responsive image styles
+for it, and apply those styles to the <header> tag. Else, we just output a <header> tag
+with a `no-image` class so we can style it accordingly.
+--}}
+
+<!-- Slider
+============================================= -->
+<section id="slider" class="slider-element slider-parallax full-screen">
+
+    <div class="slider-parallax-inner">
+
+        <div class="full-screen section nopadding nomargin noborder ohidden"
+             style="background-image: url('/assets/images/slider/rev/school-background.jpg');
+                 background-size: cover; background-position: center center;">
+
+            <div class="container clearfix">
+                <div class="vertical-middle">
+                    <div class="row">
+                        <div class="offset-lg-1 col-lg-5 col-md-6">
+                            <div class="d-none d-lg-block topmargin"></div>
+                            <h2>WELCOME TO CLASSON EDUCATION PLATFORM</h2>
+                            <div class="fslider testimonial testimonials-lg nobg noborder noshadow nopadding"
+                                 data-animation="fade" data-arrows="false" data-pagi="false">
+                                <div class="flexslider">
+                                    <div class="slider-wrap">
+                                        <div class="slide">
+                                            <div class="testi-content">
+                                                <p>EASY TO LEARN - EASY TO TEACH</p>
+                                            </div>
+                                        </div>
+                                        <div class="slide">
+                                            <div class="testi-content">
+                                                <p><small>At ClassOn, we focus on improving and making a better life
+                                                    for
+                                                    every employee</small></p>
+                                                <div class="testi-meta">
+                                                    Cuong Dao
+                                                    <span>ClassOn C.O.O</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="slide">
+                                            <div class="testi-content">
+                                                <p><small>ClassOn has its goal to bring on knowledge anywhere,
+                                                    anytime, for
+                                                    everyone</small></p>
+                                                <div class="testi-meta">
+                                                    Duc Trinh
+                                                    <span>ClassOn C.E.O</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-block d-md-none topmargin"></div>
+                        </div>
+                        <div class="offset-lg-1 col-lg-4 col-md-6">
+                            <div class="card" style="border-color: #eee;">
+                                <div class="card-body" style="padding: 30px;">
+                                    <div class="heading-block nobottomborder bottommargin-sm">
+                                        <h1 style="font-size: 20px;">Start your Free Trial</h1>
+                                        <span style="font-size: 15px;" class="t300 capitalize ls1 notopmargin">
+                                                Get Started within 5 Minutes.</span>
+                                    </div>
+                                    <form action="#" class="clearfix">
+                                        <div class="col_full">
+                                            <label for="template-op-form-email" class="capitalize t600">
+                                                Username or Email</label>
+                                            <input type="email" id="template-op-form-email"
+                                                   name="template-op-form-email" value=""
+                                                   class="form-control not-dark"/>
+                                        </div>
+                                        <div class="col_full">
+                                            <label for="template-op-form-password" class="capitalize t600">
+                                                Choose Password</label>
+                                            <input type="password" id="template-op-form-password"
+                                                   name="template-op-form-password" value=""
+                                                   class="form-control not-dark"/>
+                                        </div>
+                                        <div class="col_full nobottommargin">
+                                            <button type="submit"
+                                                    class="t400 capitalize button button-border button-circle nomargin"
+                                                    value="submit">Register Now
+                                            </button>
+                                        </div>
+                                    </form>
+                                    <p class="nobottommargin"><small class="t300"><em>* No Credit Card
+                                        Required</em></small>
+                                    </p>
+                                    <a href="http://www.freepik.com"><small class="t300">Background Designed by
+                                        Freepik</small></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="video-wrap" style="z-index:1;">
+                <div class="video-overlay" style="background: rgba(255,255,255,0.8);"></div>
+            </div>
+
+            <a href="#" data-scrollto="#section-valueproposition" data-easing="easeInOutExpo" data-speed="1250"
+               data-offset="65" class="one-page-arrow"><i class="icon-angle-down infinite animated fadeInDown"></i></a>
+
+        </div>
+    </div>
+
+</section><!-- #slider end -->

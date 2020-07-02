@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="{{@site.lang}}">
+<head>
+
+    {{!-- Document Settings --}}
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+
+    {{!-- Base Meta --}}
+    <title>{{meta_title}}</title>
+    <meta name="HandheldFriendly" content="True"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    {{!-- Styles'n'Scripts --}}
+    <!-- Stylesheets
+    ============================================= -->
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700|Roboto:300,400,500,700|Passion+One"
+          rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="/assets/css/bootstrap.css" type="text/css"/>
+    <link rel="stylesheet" href="/assets/css/style.css" type="text/css"/>
+    <!-- One Page Module Specific Stylesheet -->
+    <link rel="stylesheet" href="/assets/css/onepage.css" type="text/css"/>
+    <!-- / -->
+    <link rel="stylesheet" href="/assets/css/dark.css" type="text/css"/>
+    <link rel="stylesheet" href="/assets/css/font-icons.css" type="text/css"/>
+    <link rel="stylesheet" href="/assets/css/et-line.css" type="text/css"/>
+    <link rel="stylesheet" href="/assets/css/animate.css" type="text/css"/>
+    <link rel="stylesheet" href="/assets/css/magnific-popup.css" type="text/css"/>
+    <link rel="stylesheet" href="/assets/css/fonts.css" type="text/css"/>
+    <link rel="stylesheet" href="/assets/css/responsive.css" type="text/css"/>
+
+    {{!-- This tag outputs SEO meta+structured data and other important settings --}}
+    {{ghost_head}}
+
+</head>
+
+<body class="{{body_class}} stretched" data-loader="11" data-loader-color="#543456">
+
+    <!-- Document Wrapper
+    ============================================= -->
+    <div id="wrapper" class="clearfix">
+        {{> header-classon}}
+
+        {{> slider-classon}}
+
+        {{{body}}}
+
+        {{> footer-classon}}
+    </div><!-- #wrapper end -->
+
+    <!-- Go To Top
+    ============================================= -->
+    <div id="gotoTop" class="icon-angle-up"></div>
+
+    <!-- External JavaScripts
+    ============================================= -->
+    <script src="/assets/js/jquery.js"></script>
+    <script src="/assets/js/plugins.js"></script>
+
+    <!-- Google Map JavaScripts
+    ============================================= -->
+    <script src="https://maps.google.com/maps/api/js?key=AIzaSyCzkxzbEni5vR_Ugt1De8gBzrLX3236bnA"></script>
+    <script src="/assets/js/jquery.gmap.js"></script>
+
+    <!-- Footer Scripts
+    ============================================= -->
+    <script src="/assets/js/functions.js"></script>
+
+    <script>
+
+        jQuery(window).on('load', function () {
+
+            // Google Map
+            jQuery('#headquarters-map').gMap({
+                address: 'Melbourne, Australia',
+                maptype: 'ROADMAP',
+                zoom: 14,
+                markers: [
+                    {
+                        address: "Melbourne, Australia",
+                        html: "Melbourne, Australia",
+                        icon: {
+                            image: "images/icons/map-icon-red.png",
+                            iconsize: [32, 32],
+                            iconanchor: [14, 44]
+                        }
+                    }
+                ],
+                doubleclickzoom: false,
+                controls: {
+                    panControl: false,
+                    zoomControl: false,
+                    mapTypeControl: false,
+                    scaleControl: false,
+                    streetViewControl: false,
+                    overviewMapControl: false
+                },
+                styles: [{
+                    "featureType": "all",
+                    "elementType": "labels.text.fill",
+                    "stylers": [{"saturation": 36}, {"color": "#000000"}, {"lightness": 40}]
+                }, {
+                    "featureType": "all",
+                    "elementType": "labels.text.stroke",
+                    "stylers": [{"visibility": "on"}, {"color": "#000000"}, {"lightness": 16}]
+                }, {
+                    "featureType": "all",
+                    "elementType": "labels.icon",
+                    "stylers": [{"visibility": "off"}]
+                }, {
+                    "featureType": "administrative",
+                    "elementType": "geometry.fill",
+                    "stylers": [{"color": "#000000"}, {"lightness": 20}]
+                }, {
+                    "featureType": "administrative",
+                    "elementType": "geometry.stroke",
+                    "stylers": [{"color": "#000000"}, {"lightness": 17}, {"weight": 1.2}]
+                }, {
+                    "featureType": "administrative",
+                    "elementType": "labels",
+                    "stylers": [{"visibility": "off"}]
+                }, {
+                    "featureType": "administrative.country",
+                    "elementType": "all",
+                    "stylers": [{"visibility": "simplified"}]
+                }, {
+                    "featureType": "administrative.country",
+                    "elementType": "geometry",
+                    "stylers": [{"visibility": "simplified"}]
+                }, {
+                    "featureType": "administrative.country",
+                    "elementType": "labels.text",
+                    "stylers": [{"visibility": "simplified"}]
+                }, {
+                    "featureType": "administrative.province",
+                    "elementType": "all",
+                    "stylers": [{"visibility": "off"}]
+                }, {
+                    "featureType": "administrative.locality",
+                    "elementType": "all",
+                    "stylers": [{"visibility": "simplified"}, {"saturation": "-100"}, {"lightness": "30"}]
+                }, {
+                    "featureType": "administrative.neighborhood",
+                    "elementType": "all",
+                    "stylers": [{"visibility": "off"}]
+                }, {
+                    "featureType": "administrative.land_parcel",
+                    "elementType": "all",
+                    "stylers": [{"visibility": "off"}]
+                }, {
+                    "featureType": "landscape",
+                    "elementType": "all",
+                    "stylers": [{"visibility": "simplified"}, {"gamma": "0.00"}, {"lightness": "74"}]
+                }, {
+                    "featureType": "landscape",
+                    "elementType": "geometry",
+                    "stylers": [{"color": "#000000"}, {"lightness": 20}]
+                }, {
+                    "featureType": "landscape.man_made",
+                    "elementType": "all",
+                    "stylers": [{"lightness": "3"}]
+                }, {"featureType": "poi", "elementType": "all", "stylers": [{"visibility": "off"}]}, {
+                    "featureType": "poi",
+                    "elementType": "geometry",
+                    "stylers": [{"color": "#000000"}, {"lightness": 21}]
+                }, {
+                    "featureType": "road",
+                    "elementType": "geometry",
+                    "stylers": [{"visibility": "simplified"}]
+                }, {
+                    "featureType": "road.highway",
+                    "elementType": "geometry.fill",
+                    "stylers": [{"color": "#000000"}, {"lightness": 17}]
+                }, {
+                    "featureType": "road.highway",
+                    "elementType": "geometry.stroke",
+                    "stylers": [{"color": "#000000"}, {"lightness": 29}, {"weight": 0.2}]
+                }, {
+                    "featureType": "road.arterial",
+                    "elementType": "geometry",
+                    "stylers": [{"color": "#000000"}, {"lightness": 18}]
+                }, {
+                    "featureType": "road.local",
+                    "elementType": "geometry",
+                    "stylers": [{"color": "#000000"}, {"lightness": 16}]
+                }, {
+                    "featureType": "transit",
+                    "elementType": "geometry",
+                    "stylers": [{"color": "#000000"}, {"lightness": 19}]
+                }, {
+                    "featureType": "water",
+                    "elementType": "geometry",
+                    "stylers": [{"color": "#000000"}, {"lightness": 17}]
+                }]
+            });
+
+        });
+
+    </script>
+
+    {{!-- The #block helper will pull in data from the #contentFor other template files. In this case, there's some JavaScript which we only want to use in post.hbs, but it needs to be included down here, after jQuery has already loaded. --}}
+    {{{block "scripts"}}}
+
+    {{!-- Ghost outputs important scripts and data with this tag - it should always be the very last thing before the closing body tag --}}
+    {{ghost_foot}}
+
+</body>
+</html>
